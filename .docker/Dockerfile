@@ -1,4 +1,4 @@
-FROM php:7
+FROM php:7.2
 MAINTAINER adam.stipak@gmail.com
 
 # system deps
