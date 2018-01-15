@@ -15,7 +15,12 @@ RUN apt-get install -y \
     zlib1g-dev \
     nodejs
 
-# php extensions
+# install nodejs
+RUN apt-get update && \
+  curl -sL https://deb.nodesource.com/setup_8.x | bash
+RUN apt-get install -y nodejs
+
+RUN # php extensions
 RUN docker-php-ext-install zip
 
 # binaries
