@@ -8,7 +8,7 @@ RUN apt-get update && \
     gnupg
 
 # system deps configuration
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 # nodejs
 RUN apt-get install -y \
