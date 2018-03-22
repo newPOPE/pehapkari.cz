@@ -5,20 +5,12 @@ MAINTAINER adam.stipak@gmail.com
 RUN apt-get update && \
   apt-get install -y \
     git \
-    gnupg
-
-# system deps configuration
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
-
-# nodejs
-RUN apt-get install -y \
-    zlib1g-dev \
-    nodejs
+    gnupg \
+    zlib1g-dev
 
 # install nodejs
-RUN apt-get update && \
-  curl -sL https://deb.nodesource.com/setup_8.x | bash
-RUN apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - &&\
+  apt-get install -y nodejs
 
 RUN # php extensions
 RUN docker-php-ext-install zip
